@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
+
+.main-div{
+    background-color:#a1a1a152;
+    width: 90%;
+    margin: 10px auto;
+    padding: 1px 0;
+}
+
+.card-container {
+    width: 98%;
+    background-color: white;
+    margin:10px auto;
+    padding-bottom:10px; 
+    border-radius: 15px;  
+}
+
+.card-container button {
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border:none;
+    color:white;
+    background-color: #f72121;
+    text-transform: uppercase;
+}
+.card-container button:hover{
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border:1px solid #f72121;
+    color:#f72121;
+    background-color: white;
+    cursor:pointer;
+}
+.main-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius:15px;
+}
+
+.details-section{
+    width: 90%;
+    border: 3px solid #857d7d10;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align:start;
+    padding-left: 20px;
+}
+.Contact-details{
+    display: grid;
+    grid-template-columns: repeat(min(2),1fr);
+    justify-items: start;
+    padding-top: 20px;
+    grid-gap: 10px;
+    width: 100%;
+}
+
