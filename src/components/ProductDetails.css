@@ -23,7 +23,7 @@
     border-radius: 15px;  
 }
 
-.card-container button {
+button {
     padding: 0.5em 1em;
     border-radius: 50px;
     border:none;
@@ -31,7 +31,7 @@
     background-color: #f72121;
     text-transform: uppercase;
 }
-.card-container button:hover{
+button:hover{
     padding: 0.5em 1em;
     border-radius: 50px;
     border:1px solid #f72121;
@@ -47,17 +47,18 @@
     border-radius:15px;
 }
 
-.details-section{
+.content{
     width: 90%;
     border: 3px solid #857d7d10;
     padding: 10px;
     margin: 10px auto;
-    display: block;
     line-height: 30px;
     border-radius: 15px;
     text-align:start;
     padding-left: 20px;
 }
+
+
 .Contact-details{
     display: grid;
     grid-template-columns: repeat(min(2),1fr);
@@ -65,5 +66,9 @@
     padding-top: 20px;
     grid-gap: 10px;
     width: 100%;
+}
+
+.block{
+    display: block;
 }
 

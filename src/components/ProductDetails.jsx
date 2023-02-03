@@ -4,9 +4,8 @@ import './ProductDetails.css';
 const ProductDetails = () => {
 
     const [products, setProducts] = useState([]);
-    const [visible, setVisible] = useState(false)
-
-
+    const [visible, setVisible] = useState(false);
+    const [visibleId, setVisibleId] = useState('')
 
     useEffect(()=>{
         fetch('data.json')
@@ -14,8 +13,7 @@ const ProductDetails = () => {
         .then(data => setProducts(data))
     },[setProducts])
 
-    console.log(visible)
-
+    console.log('visible:', visible, 'id:', visibleId)
     
     return (
         <div className="container">
@@ -38,10 +36,14 @@ const ProductDetails = () => {
                     <h3>street</h3>
                     <p>{product.address.street}</p>
                     </div>
-                    <button type="button" id="collapsible-button" className=''  onClick={()=>setVisible(!visible)}>show details</button>
+                    <button onClick={() => {
+                        setVisible(!visible)
+                    setVisibleId(product.id)
+                }
+            } >show details</button>
                     </div>
-                    {
-                        visible ? <div id='content' className="details-section">
+                     {
+                        visible && visibleId === product.id && <div className="details-section content">
                         <h4>Description</h4>
                         <p>{product.company.bs+'. '+product.company.catchPhrase}</p>
                         <div className='Contact-details'>
@@ -78,8 +80,8 @@ const ProductDetails = () => {
                             <p>{product.address.country}</p>
                             </div>
                         </div>
-                    </div> : ''
-                    }
+                    </div>
+                     } 
                 </div>)
             }
             </div>
